@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pet Shop</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&family=ADLaM+Display&display=swap" rel="stylesheet">
+
+  <!-- DaisyUI + Tailwind -->
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.24/dist/full.min.css" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/ae3a1a671b.js" crossorigin="anonymous"></script>
+
+  <style>
+    .sora-font {
+      font-family: "Sora", sans-serif;
+    }
+    .adlam-display-regular {
+      font-family: "ADLaM Display", system-ui;
+      font-weight: 400;
+      font-style: normal;
+    }
+  </style>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            clifford: '#da373d',
+            "cat-btn": '#FFDC26',
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="md:container mx-auto">
+  <!-- Header -->
+  <header>
+    <nav>
+      <div class="navbar bg-base-100 justify-between">
+
+        <!-- Left side: Logo -->
+        <div class="flex items-center gap-2">
+          <img src="c1-assets/logo-header.png" alt="Logo" class="h-8 w-auto" />
+          
+          <!-- Browse4Pets only on large screens -->
+          <a class="btn btn-ghost text-xl hidden lg:inline-flex">
+            Browse<span class="text-yellow-400">4</span>Pets
+          </a>
+        </div>
+
+        <!-- Center Menu (Only for desktop) -->
+        <div class="hidden lg:flex">
+          <ul class="menu menu-horizontal px-1">
+            <li><a>Find a pet</a></li>
+            <li><a>Breeds</a></li>
+            <li><a>Contact Us</a></li>
+          </ul>
+        </div>
+
+        <!-- Right side -->
+        <div class="flex items-center gap-2">
+
+          <!-- Desktop view icons and buttons -->
+          <div class="hidden lg:flex items-center gap-2">
+            <i class="fa-regular fa-bell"></i>
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <a class="btn border border-yellow-300">Login</a>
+            <a class="btn bg-cat-btn">Button</a>
+          </div>
+
+          <!-- Mobile view menu icon -->
+          <div class="dropdown dropdown-end lg:hidden">
+            <div tabindex="0" role="button" class="btn btn-ghost">
+             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none"
+                viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            </div>
+            <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+              <li><a>Find a pet</a></li>
+              <li><a>Breeds</a></li>
+              <li><a>Contact Us</a></li>
+              <li><a>Login</a></li>
+              <li><a>Button</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Main Section -->
+  <main class="mt-10">
+    <!-- Desktop Banner (shown on lg screens and above) -->
+    <section class="relative h-[500px] md:h-[600px] overflow-hidden hidden lg:block">
+      <!-- Background Image -->
+      <div class="absolute  ">
+        <!-- Placeholder for background image -->
+        <img src="c1-assets/cat-big.png" alt="Happy pets" class="w-full h-full object-cover">
+      </div>
+      
+      <!-- Content Overlay -->
+      <div class="absolute  flex items-center">
+        <div class="container mx-auto px-6 md:px-12">
+          <div class="max-w-2xl">
+            <h1 class="text-4xl md:text-6xl font-bold mb-4 adlam-display-regular">
+              Pamper Your Pet,<br>
+              Because They Deserve<br>
+              the Best
+            </h1>
+            
+            <p class="text-lg md:text-xl  mb-8 sora-font">
+              Discover a world of rapids, toys, and essentials throughout the<br>
+              your story thrinds. Shop new and make it fit way with joy!
+            </p>
+            
+            <button class="btn bg-cat-btn text-black hover:bg-yellow-500 border-none px-8 py-3 text-lg sora-font">
+              Shop Now
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+<!-- Mobile Banner -->
+<section class="lg:hidden bg-white relative min-h-[400px]">
+  <!-- Text Content (relative positioned) -->
+  <div class="relative z-10 px-5 pt-6">
+    <h1 class="text-[28px] font-bold text-gray-800 mb-3 adlam-display-regular text-left leading-tight">
+      Pamper Your Pet,<br>
+      Because They Deserve
+    </h1>
+    
+    <p class="text-[15px] text-gray-700 mb-5 sora-font text-left leading-snug">
+      Discover a world of treats, toys, and<br>
+      essentials handpicked for your furry<br>
+      friends. Shop now and make tails wag with
+    </p>
+  
+    <button class="btn bg-cat-btn text-black hover:bg-yellow-500 border-none px-5 py-2 text-[15px] sora-font rounded-lg">
+      Shop Now
+    </button>
+  </div>
+  
+  <!-- Cat Image (absolute positioned at bottom) -->
+  <div class="absolute bottom-0 left-0 right-0  w-full h-[200px] overflow-hidden">
+    <img src="c1-assets/cat-big.png" 
+         alt="Happy cat" 
+         class="w-full h-full object-center hover:-translate-y-3">
+  </div>
+</section>
+  </main>
+
+  <!-- Footer -->
+  <footer></footer>
+</body>
+</html>
