@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Browse4Pets</title>
+  
+  <!-- Tailwind -->
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" 
+    integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=ADLaM+Display&display=swap" rel="stylesheet">
+</head>
+
+<body class="font-[adlam-display]">
+
+  <!-- Navbar -->
+  <nav class="flex justify-between items-center w-[90%] mx-auto py-4">
+    <div class="flex items-center gap-2">
+      <img class="h-[35px] w-[35px]" src="c1-assets/logo-header.png" alt="Logo">
+      <p class="text-lg font-bold">Browse<span class="text-[#FFDC26]">4</span>Pets</p>
+    </div>
+
+    <div class="flex items-center gap-6">
+      <p class="cursor-pointer hover:text-[#FFDC26]">Find a Pet</p>
+      <p class="cursor-pointer hover:text-[#FFDC26]">Breeds</p>
+      <p class="cursor-pointer hover:text-[#FFDC26]">Contact Us</p>
+    </div>
+
+    <div class="flex items-center gap-3">
+      <i class="fa-solid fa-bell cursor-pointer"></i>
+      <i class="fa-solid fa-magnifying-glass cursor-pointer"></i>
+      <button class="ml-2 px-4 py-1 border border-[#FFDC26] rounded-md">Login</button>
+      <button class="bg-[#FFDC26] rounded-md px-4 py-1 ml-2">Register</button>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="w-[90%] mx-auto mt-10 relative">
+    <div class="absolute top-20 left-10 max-w-lg">
+      <h1 class="text-5xl font-bold leading-snug">
+        Pamper Your Pet,<br> Because They Deserve <br> the Best
+      </h1>
+      <p class="mt-5 text-gray-700">
+        Discover a world of treats, toys, and essentials handpicked for <br> your furry
+        friends. Shop now and make tails wag with joy!
+      </p>
+      <button class="bg-[#FFDC26] mt-6 rounded-md px-6 py-2 font-semibold">Find a Pet</button>
+    </div>
+    <img src="c1-assets/cat-big.png" alt="Cat" class="ml-auto">
+  </section>
+
+  <!-- Categories Section -->
+  <section class="w-[90%] mx-auto mt-28">
+    <h2 class="text-2xl font-bold mb-6">Browse By Categories</h2>
+
+    <div class="flex flex-wrap gap-6">
+      <!-- Card -->
+      <div class="w-48 bg-yellow-200 rounded-xl shadow p-6 flex flex-col items-center">
+        <div class="w-20 h-20 rounded-full bg-white flex items-center justify-center">
+          <img src="c1-assets/dog-cartoon.png" alt="Dog" class="w-12 h-12">
+        </div>
+        <h3 class="mt-4 text-lg font-bold">Dog</h3>
+        <p class="text-gray-700 text-sm">3 items</p>
+      </div>
+
+      <!-- Example More Cards -->
+      <div class="w-48 bg-yellow-200 rounded-xl shadow p-6 flex flex-col items-center">
+        <div class="w-20 h-20 rounded-full bg-white flex items-center justify-center">
+          <img src="c1-assets/fish-cartoon.png" alt="Fish" class="w-12 h-12">
+        </div>
+        <h3 class="mt-4 text-lg font-bold">Fish</h3>
+        <p class="text-gray-700 text-sm">3 items</p>
+      </div>
+
+      <div class="w-48 bg-yellow-200 rounded-xl shadow p-6 flex flex-col items-center">
+        <div class="w-20 h-20 rounded-full bg-white flex items-center justify-center">
+          <img src="c1-assets/cat-big.png" alt="Cat" class="w-12 h-12">
+        </div>
+        <h3 class="mt-4 text-lg font-bold">Cat</h3>
+        <p class="text-gray-700 text-sm">5 items</p>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>
